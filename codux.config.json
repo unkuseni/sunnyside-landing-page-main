@@ -23,5 +23,6 @@
   "styling": {
     "solution": "scss modules"
   },
-  "svgLoader": "both"
+  "svgLoader": "both",
+  "tailwindcssConfig": "./tailwind.config.js"
 }

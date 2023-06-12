@@ -5,7 +5,10 @@ export default createBoard({
     name: 'Navbar',
     Board: () => <Navbar />,
     environmentProps: {
-        windowBackgroundColor: '#cebdbd',
-        windowWidth: 1024,
+        windowBackgroundColor: '#121212',
+        windowWidth: 924,
+        canvasWidth: 658,
+        canvasHeight: 116,
+        windowHeight: 667,
     },
 });

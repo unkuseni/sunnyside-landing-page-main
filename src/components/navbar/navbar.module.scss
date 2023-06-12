@@ -1,2 +1,68 @@
 .root {
 }
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding-top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: auto;
+  overflow: hidden;
+  color: #fff;
+  background-color: transparent;
+  height: 56px;
+}
+.logo {
+  display: block;
+  align-self: center;
+  width: auto;
+}
+.nav-items {
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    display: inline;
+    align-self: center;
+    padding: 0px 10px;
+  }
+  display: inline-flex;
+  align-self: center;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  width: auto;
+}
+.logo-img {
+  display: block;
+  align-self: center;
+}
+.items {
+  align-self: center;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+}
+.nav-button {
+  padding: 0px;
+  outline: none;
+  background: transparent;
+  box-shadow: 0 0 transparent;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    background-color: transparent;
+  }
+  opacity: 0.9;
+}

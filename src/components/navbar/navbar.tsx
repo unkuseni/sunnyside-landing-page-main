@@ -1,33 +1,64 @@
 import classNames from 'classnames';
 import logo from '../../assets/logo.svg';
-import styles from './navbar.module.css';
+import button from '../../assets/icon-hamburger.svg';
+import Navbar_module from './navbar.module.scss';
+import { useEffect, useState } from 'react';
 export interface NavbarProps {
     className?: string;
 }
+
 export const Navbar = ({ className }: NavbarProps) => {
-    return (
-        <div className={classNames()}>
-            <nav className={classNames("flex","justify-center", "items-center")}>
-                <div id={'logo'}>
-                    <img src={logo} alt={'logo'} />
-                </div>
-                <div>
-                    <ul>
-                        <li>
-                            <a href="/">About</a>
-                        </li>
-                        <li>
-                            <a href="/">Services</a>
-                        </li>
-                        <li>
-                            <a href="/">Projects</a>
-                        </li>
-                        <li>
-                            <a href="/">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    });
+    const toggleMenu = () => {};
+    const desktopNavItems = (
+        <div className={Navbar_module['nav-items']}>
+            <ul className={Navbar_module.items}>
+                <li>
+                    <a href="/">About</a>
+                </li>
+                <li>
+                    <a href="/">Services</a>
+                </li>
+                <li>
+                    <a href="/">Projects</a>
+                </li>
+                <li>
+                    <a href="/">Contact</a>
+                </li>
+            </ul>
         </div>
+    );
+    const mobileNavItems = (
+        <div className={Navbar_module['nav-items']}>
+            <button type="button" className={classNames(Navbar_module['nav-button'], Navbar_module.items)}>
+                <img src={button} alt="nav-button" onClick={toggleMenu}/>
+            </button>
+        </div>
+    );
+    return (
+        <header>
+            <nav className={Navbar_module.navbar}>
+                <div id={'logo'} className={Navbar_module.logo}>
+                    <img
+                        src={logo}
+                        alt={'logo'}
+                        width={'124px'}
+                        height={'24px'}
+                        className={Navbar_module['logo-img']}
+                    />
+                </div>
+                {!isMobile && desktopNavItems}
+                {isMobile && mobileNavItems}
+            </nav>
+        </header>
     );
 };

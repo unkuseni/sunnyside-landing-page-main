@@ -66,13 +66,28 @@
   }
   opacity: 0.9;
 }
-.mobile-nav{
-  
+.mobile-nav {
+  display: flex;
+  position: absolute;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 0px;
+  max-width: 300px;
+  margin: 10px;
+  clip-path: polygon(100% 100%, 100% 0, 94% 14%, 0 14%, 0% 100%);
+  top: 30px;
+  right: 20px;
+  z-index: 1;
+  flex-direction: column;
+  .items {
+    flex-direction: column;
+  }
 }
+
 .open {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 .close {
   display: none;
 }
-

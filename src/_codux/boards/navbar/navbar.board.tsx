@@ -6,7 +6,7 @@ export default createBoard({
     Board: () => <Navbar />,
     environmentProps: {
         windowBackgroundColor: '#121212',
-        windowWidth: 924,
+        windowWidth: 670,
         canvasWidth: 658,
         canvasHeight: 116,
         windowHeight: 667,

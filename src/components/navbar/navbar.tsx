@@ -9,16 +9,20 @@ export interface NavbarProps {
 
 export const Navbar = ({ className }: NavbarProps) => {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isOpen, setIsOpen] = useState(false);
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 768);
+            setIsOpen(false);
         };
         window.addEventListener('resize', handleResize);
         return () => {
             window.removeEventListener('resize', handleResize);
         };
     });
-    const toggleMenu = () => {};
+    const toggleMenu = () => {
+       setIsOpen(!isOpen);
+    };
     const desktopNavItems = (
         <div className={Navbar_module['nav-items']}>
             <ul className={Navbar_module.items}>
@@ -39,8 +43,29 @@ export const Navbar = ({ className }: NavbarProps) => {
     );
     const mobileNavItems = (
         <div className={Navbar_module['nav-items']}>
-            <button type="button" className={classNames(Navbar_module['nav-button'], Navbar_module.items)}>
-                <img src={button} alt="nav-button" onClick={toggleMenu}/>
+            <div id={'mobile-nav'} className={classNames(Navbar_module['mobile-nav'],
+            isOpen ? Navbar_module['open'] : Navbar_module['close'])}>
+                <ul className={Navbar_module.items}>
+                    <li>
+                        <a href="/">About</a>
+                    </li>
+                    <li>
+                        <a href="/">Services</a>
+                    </li>
+                    <li>
+                        <a href="/">Projects</a>
+                    </li>
+                    <li>
+                        <a href="/">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <button
+                id="nav-button"
+                type="button"
+                className={classNames(Navbar_module['nav-button'], Navbar_module.items)}
+            >
+                <img src={button} alt="nav-button" onClick={toggleMenu} />
             </button>
         </div>
     );

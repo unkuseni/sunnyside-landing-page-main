@@ -1,0 +1,39 @@
+.root {
+  background-image: url(../../assets/mobile/image-header.jpg);
+  background-color: transparent;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  aspect-ratio: 4/3;
+  width: 100dvw;
+    height: 100%;
+}
+// replace the  background image using a  media query
+@media screen and (min-width: 485px) {
+  .root {
+    background-image: url(../../assets/desktop/image-header.jpg);
+    background-color: transparent;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 100%;
+  }
+}
+h1 {
+  text-transform: uppercase;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  img {
+    display: block;
+    width: 36px;
+    height: 114px;
+  }
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+}

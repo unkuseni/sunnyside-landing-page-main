@@ -21,7 +21,7 @@ export const Navbar = ({ className }: NavbarProps) => {
         };
     });
     const toggleMenu = () => {
-       setIsOpen(!isOpen);
+        setIsOpen(!isOpen);
     };
     const desktopNavItems = (
         <div className={Navbar_module['nav-items']}>
@@ -43,8 +43,13 @@ export const Navbar = ({ className }: NavbarProps) => {
     );
     const mobileNavItems = (
         <div className={Navbar_module['nav-items']}>
-            <div id={'mobile-nav'} className={classNames(Navbar_module['mobile-nav'],
-            isOpen ? Navbar_module['open'] : Navbar_module['close'])}>
+            <div
+                id={'mobile-nav'}
+                className={classNames(
+                    Navbar_module['mobile-nav'],
+                    isOpen ? Navbar_module['open'] : Navbar_module['close']
+                )}
+            >
                 <ul className={Navbar_module.items}>
                     <li>
                         <a href="/">About</a>
@@ -70,7 +75,7 @@ export const Navbar = ({ className }: NavbarProps) => {
         </div>
     );
     return (
-        <header>
+        <header className={Navbar_module.root}>
             <nav className={Navbar_module.navbar}>
                 <div id={'logo'} className={Navbar_module.logo}>
                     <img

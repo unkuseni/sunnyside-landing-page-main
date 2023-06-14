@@ -1,14 +1,12 @@
 import classNames from 'classnames';
-import { Navbar } from './components/navbar/navbar';
+import { Hero } from './components/hero/hero';
 import styles from './App.module.scss';
 function App() {
   
 
     return (
         <main className={classNames(styles.App)}>
-            <h1>Hello CodeSandbox</h1>
-            <h2>Start editing to see some magic happen!</h2>
-        <Navbar />
+        <Hero/>
         </main>
 
     );

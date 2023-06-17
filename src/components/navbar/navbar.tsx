@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import logo from '../../assets/logo.svg';
-import button from '../../assets/icon-hamburger.svg';
+import { ReactComponent as Hamburger } from '../../assets/icon-hamburger.svg';
 import Navbar_module from './navbar.module.scss';
 import { useEffect, useState } from 'react';
 export interface NavbarProps {
@@ -68,9 +68,9 @@ export const Navbar = ({ className }: NavbarProps) => {
             <button
                 id="nav-button"
                 type="button"
-                className={classNames(Navbar_module['nav-button'], Navbar_module.items)}
+                className={classNames(Navbar_module['nav-button'], Navbar_module.items)} onClick={toggleMenu}
             >
-                <img src={button} alt="nav-button" onClick={toggleMenu} />
+               <Hamburger/>
             </button>
         </div>
     );

@@ -1,6 +1,6 @@
 import classNames from 'classnames';
-import logo from '../../assets/logo.svg';
-import { ReactComponent as Hamburger } from '../../assets/icon-hamburger.svg';
+import logo from '@/assets/logo.svg';
+import { ReactComponent as Hamburger } from '@/assets/icon-hamburger.svg';
 import Navbar_module from './navbar.module.scss';
 import { useEffect, useState } from 'react';
 export interface NavbarProps {

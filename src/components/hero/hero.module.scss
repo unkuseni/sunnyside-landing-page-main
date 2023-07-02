@@ -1,17 +1,17 @@
 .root {
-  background-image: url(../../assets/mobile/image-header.jpg);
+  background-image: url(@/assets/mobile/image-header.jpg);
   background-color: transparent;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   aspect-ratio: 4/3;
-  width: 100dvw;
+  width: 100vw;
     height: 100%;
 }
 // replace the  background image using a  media query
-@media screen and (min-width: 485px) {
+@media screen and (min-width: 768px) {
   .root {
-    background-image: url(../../assets/desktop/image-header.jpg);
+    background-image: url(@/assets/desktop/image-header.jpg);
     background-color: transparent;
     background-position: center;
     background-size: cover;

@@ -1,5 +1,5 @@
 import { createBoard } from '@wixc3/react-board';
-import { Hero } from '../../../components/hero/hero';
+import { Hero } from '@/../components/hero/hero';
 
 export default createBoard({
     name: 'Hero',
@@ -7,7 +7,7 @@ export default createBoard({
     environmentProps: {
         canvasWidth: 2088,
         canvasHeight: 1658,
-        windowWidth: 300,
+        windowWidth: 640,
         windowHeight: 768,
     },
 });

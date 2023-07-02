@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import styles from './hero.module.scss';
-import { Navbar } from '../navbar/navbar';
-import arrow from '../../assets/icon-arrow-down.svg';
+import { Navbar } from '@/components/navbar/navbar';
+import arrow from '@/assets/icon-arrow-down.svg';
 
 export interface HeroProps {
     className?: string;
